@@ -57,10 +57,12 @@ docker build -t dockerize-node .
 ### Run the Container
 
 ```bash
-docker run dockerize-node
+docker run -it dockerize-node
 ```
 
 This will run the Hello World script inside the container and output the result.
+
+The `-it` parameter is important, or else the coloring won't work.
 
 ### View Previous Container Logs
 
@@ -72,7 +74,7 @@ docker logs $(docker ps -a -q --filter ancestor=dockerize-node --latest)
 
 1. Make changes to the code
 2. Build the Docker image: `docker build -t dockerize-node .`
-3. Run the container: `docker run dockerize-node`
+3. Run the container: `docker run -it dockerize-node`
 4. Test your changes
 
 ## Notes
