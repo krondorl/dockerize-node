@@ -1,8 +1,8 @@
-FROM node:24.9.1-alpine
+FROM node:24.10-alpine
 
 # Create a non-root user and group
 RUN addgroup -g 1001 -S nodejs && \
-    adduser -S nodejs -u 1001 -G nodejs
+  adduser -S nodejs -u 1001 -G nodejs
 
 # Set working directory inside the container
 WORKDIR /app
