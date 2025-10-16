@@ -50,8 +50,16 @@ node index.js
 
 ### Build the Docker Image
 
+Node.js environment is set to production by default.
+
 ```bash
 docker build -t dockerize-node .
+```
+
+If you want to set the Node.js environment to development:
+
+```bash
+docker build -t --build-arg NODE_ENV=development .
 ```
 
 ### Run the Container
