@@ -15,8 +15,8 @@ WORKDIR /app
 # Copy package.json to install dependencies
 COPY package.json .
 
-# Install only production dependencies and clean cache to reduce size
-RUN npm install --omit=dev && npm cache clean --force
+# Install dependencies and clean cache to reduce size
+RUN npm install && npm cache clean --force
 
 # Copy app source code
 COPY . .
